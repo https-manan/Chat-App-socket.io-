@@ -1,7 +1,8 @@
+import './App.css';
 import { useState, useEffect } from 'react';
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:3000'); // connect once
+const socket = io('http://localhost:3000'); 
 
 function App() {
   const [message, setMessage] = useState('');
@@ -28,7 +29,6 @@ function App() {
           Chat App
         </div>
 
-        {/* Chat messages */}
         <div className="h-80 overflow-y-auto p-4 space-y-2 bg-gray-50">
           {chat.map((msg, i) => (
             <div
@@ -40,7 +40,6 @@ function App() {
           ))}
         </div>
 
-        {/* Input */}
         <div className="flex border-t">
           <input
             className="flex-1 px-3 py-2 text-gray-800 focus:outline-none"
